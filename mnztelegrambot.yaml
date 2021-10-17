@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: telegrambot-config-token
+  namespace: arba
+  labels:
+    app: telegrambot
+data:
+  DEVELOPER: "Marcelo Zabaljauregui"
+  TELEGRAM_TOKEN: A_COMPLETAR
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegrambot
+  namespace: arba
+  labels:
+    app: telegrambot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telegrambot
+  template:
+    metadata:
+      labels:
+        app: telegrambot
+    spec:
+      containers:
+      - name: telegrambot
+        image: nicopaez/telegrambot:0.0.7
+        envFrom:
+          - configMapRef:
+              name: telegrambot-config-token
