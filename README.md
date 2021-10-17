@@ -21,3 +21,7 @@ kubectl apply -f mnztelegrambot.yaml
 
 ![Bot_funcionando](https://user-images.githubusercontent.com/18450145/137627287-0ae333aa-bcf4-41b2-b031-8bad9dbcef0f.PNG)
 
+#### Versión
+
+![image](https://user-images.githubusercontent.com/18450145/137627378-72f2c556-b762-4e3e-af4d-511c65dfd6c5.png)
+
